@@ -11,10 +11,12 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             GetComponent<Animator>().SetBool("IsAttack", true);
+            
         }
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             GetComponent<Animator>().SetBool("IsAttack", false);
+           
         }
 
     }
