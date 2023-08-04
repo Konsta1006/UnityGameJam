@@ -149,9 +149,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   legTarget: {fileID: 2120952927}
-  Offset: {x: 0, y: 0, z: 0}
+  Offset: {x: 1.5, y: -2, z: 0}
   StartOffset: 0
-  distance: 1
+  distance: 2
 --- !u!1 &771422530
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,9 +465,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   legTarget: {fileID: 1751049832}
-  Offset: {x: 0, y: 0, z: 0}
+  Offset: {x: -1.5, y: -2, z: 0}
   StartOffset: 0
-  distance: 1
+  distance: 2
 --- !u!1 &1218804016
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +774,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1661821311883436395, guid: 4fb06e7990120ca4ca0b1777a2eeaca1, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7713974046868683978, guid: 4fb06e7990120ca4ca0b1777a2eeaca1, type: 3}
       propertyPath: m_RootOrder
       value: 2
