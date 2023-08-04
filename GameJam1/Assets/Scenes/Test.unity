@@ -149,9 +149,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   legTarget: {fileID: 2120952927}
-  Offset: {x: 1.5, y: -2, z: 0}
-  StartOffset: -1
-  distance: 3
+  Offset: {x: 0, y: 0, z: 0}
+  StartOffset: 0
+  distance: 1
 --- !u!1 &771422530
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,9 +465,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   legTarget: {fileID: 1751049832}
-  Offset: {x: -1.5, y: -2, z: 0}
-  StartOffset: 1
-  distance: 3
+  Offset: {x: 0, y: 0, z: 0}
+  StartOffset: 0
+  distance: 1
 --- !u!1 &1218804016
 GameObject:
   m_ObjectHideFlags: 0

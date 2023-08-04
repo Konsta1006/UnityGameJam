@@ -36,7 +36,8 @@ public class Walk : MonoBehaviour
                 //fixedPos = Vector3.Lerp(fixedPos, hit.point, Time.deltaTime * 6);
             }
         }
-        legTarget.transform.position = fixedPos;
+        //legTarget.transform.position = fixedPos;
+        legTarget.transform.position = Vector3.Lerp(legTarget.transform.position,fixedPos, Time.deltaTime * 6);
     }
 
     private void OnDrawGizmos()
