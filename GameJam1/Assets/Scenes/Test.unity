@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &506093878 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7382810461541952460, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
+  m_PrefabInstance: {fileID: 1823340734385077498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &771422530
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +342,37 @@ MonoBehaviour:
   distance: 20
   sens: 3
   Player: {fileID: 2081293085}
+--- !u!1 &1418946936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418946937}
+  m_Layer: 0
+  m_Name: EyesPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1418946937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418946936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 506093878}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466905471
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +467,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1934606101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7810338860565276835, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
+  m_PrefabInstance: {fileID: 1823340734385077498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1934606103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934606101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c56962aefb1a55428632412f1701f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1418946936}
 --- !u!1 &2081293085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4281369329332708605, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
@@ -532,7 +586,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8737271245992493361, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7382810461541952460, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418946937}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4281369329332708605, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
       insertIndex: -1
@@ -540,28 +597,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4076824103137184119, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1823340734385077501}
-    - targetCorrespondingSourceObject: {fileID: 4076824103137184119, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7810338860565276835, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1823340734385077500}
+      addedObject: {fileID: 1934606103}
   m_SourcePrefab: {fileID: 100100000, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
 --- !u!1 &1823340734385077499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4076824103137184119, guid: 4b45b1cc948fa014f9e6af5afe0630bb, type: 3}
   m_PrefabInstance: {fileID: 1823340734385077498}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1823340734385077500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823340734385077499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c56962aefb1a55428632412f1701f50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &1823340734385077501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,4 +618,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c56962aefb1a55428632412f1701f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1418946936}
