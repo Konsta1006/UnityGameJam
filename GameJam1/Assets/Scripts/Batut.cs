@@ -10,13 +10,15 @@ public class Batut : MonoBehaviour
     bool B=true;
     void Update()
     {
-        RaycastHit[] colliders = Physics.BoxCastAll(transform.position, GetComponent<BoxCollider>().size + new Vector3(0, 0.5f, 0), Vector3.zero, Quaternion.Euler(0,0,0), 0f, player);
-        if (colliders != null)
+        Collider[] colliders = Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().size + new Vector3(0, 1f, 0), Quaternion.Euler(0, 0, 0), player);
+
+        if (colliders.Length > 0)
         {
+
             A = true;
             if (A == true && B == false)
             {
-                colliders[0].collider.gameObject.GetComponent<Rigidbody>().AddForce(JumpForce, ForceMode.Impulse);
+                colliders[0].gameObject.GetComponent<Rigidbody>().AddForce(JumpForce, ForceMode.Impulse);
             }
             
         }
