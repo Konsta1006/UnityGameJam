@@ -7,6 +7,7 @@ public class PlayerDamage : MonoBehaviour
 {
     [SerializeField] float HP = 100f;
     [SerializeField] Slider HPbar;
+    [SerializeField] GameObject body;
     float startHP;
 
     private void Start()
@@ -31,6 +32,13 @@ public class PlayerDamage : MonoBehaviour
 
     public void Death()
     {
+        var x = Instantiate(body);
+        x.transform.position = transform.position;
         Destroy(gameObject);
+    }
+
+    public void Heal(float heal)
+    {
+        HP = Mathf.Clamp(HP + heal,0,startHP);
     }
 }
