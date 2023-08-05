@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 25
-  speed: 20
+  speed: 60
   JumpForce: 40
   knife: {fileID: 3557942432641086933}
   Ground:
