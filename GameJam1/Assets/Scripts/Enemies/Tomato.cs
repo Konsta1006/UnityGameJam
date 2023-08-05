@@ -16,28 +16,49 @@ public class Tomato : MonoBehaviour
     bool going1;
     bool going2;
     bool stopfire = true;
+    bool Agressive = false;
+    Vector3 StartPos;
+
+    private void Start()
+    {
+        StartPos = transform.position;
+    }
     void Update()
     {
-        NavMeshAgent nav = GetComponent<NavMeshAgent>();
-        if (Vector3.Distance(transform.position, player.transform.position) > 8f)
+        if (Vector3.Distance(transform.position, player.transform.position) < 50f)
         {
-            going1 = true;
-            nav.SetDestination(player.transform.position);
+            Agressive = true;
         }
         else
         {
-
-            going1 = false;
-            minigun.Rotate(Time.deltaTime*8, 0, 0);
-            if (!going1 && going2)
-            {
-                stopfire = false;
-                StartCoroutine(ShootingMode());
-            }
+            NavMeshAgent nav = GetComponent<NavMeshAgent>();
+            Agressive = false;
+            nav.SetDestination(StartPos);
         }
-        going2 = going1;
-        
-        
+        if (Agressive)
+        {
+            NavMeshAgent nav = GetComponent<NavMeshAgent>();
+            if (Vector3.Distance(transform.position, player.transform.position) > 25f)
+            {
+                nav.speed = 5.5f;
+                going1 = true;
+                nav.SetDestination(player.transform.position);
+                stopfire = true;
+            }
+            else
+            {
+                nav.speed = 0.1f;
+                RotateTowards();
+                going1 = false;
+                minigun.Rotate(Time.deltaTime * 500, 0, 0);
+                if (!going1 && going2)
+                {
+                    stopfire = false;
+                    StartCoroutine(ShootingMode());
+                }
+            }
+            going2 = going1;
+        }
     }
 
 
@@ -56,5 +77,11 @@ public class Tomato : MonoBehaviour
         {
             StartCoroutine(ShootingMode());
         }
+    }
+
+    private void RotateTowards()
+    {
+        transform.LookAt(player.transform.position);
+        
     }
 }

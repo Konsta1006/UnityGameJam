@@ -104,7 +104,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -237,4 +237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0b6544c2468a049a11ece5be7e40a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 40
+  particles: {fileID: 5876553998580390444, guid: 222281b36ebba7845bd2254d24141916, type: 3}
+  Player:
+    serializedVersion: 2
+    m_Bits: 128
+  Ground:
+    serializedVersion: 2
+    m_Bits: 8
