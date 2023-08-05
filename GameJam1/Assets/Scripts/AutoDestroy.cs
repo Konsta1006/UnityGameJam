@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoDestroy : MonoBehaviour
 {
-    [SerializeField] float delay;
+    public float delay;
     void Start()
     {
         StartCoroutine(Destroyk());

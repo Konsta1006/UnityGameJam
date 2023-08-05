@@ -13,6 +13,7 @@ public class Walk : MonoBehaviour
     [SerializeField] float MinBodyDist;
     private Vector3 fixedPos;
     private Vector3 target;
+    
 
     private void Awake()
     {

@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 944736934576867988}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &3461221909041247175
 NavMeshAgent:
@@ -43,8 +43,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 2837905382559690564}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.3
-  m_Speed: 3.5
+  m_Radius: 2
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -140,8 +140,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2585776560280505300, guid: d9f89c38b6dca98438e2cf469faa24eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8780696339548385307}
   m_SourcePrefab: {fileID: 100100000, guid: d9f89c38b6dca98438e2cf469faa24eb, type: 3}
+--- !u!1 &417621821953944030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2585776560280505300, guid: d9f89c38b6dca98438e2cf469faa24eb, type: 3}
+  m_PrefabInstance: {fileID: 2749789252123959818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8780696339548385307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417621821953944030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb700d14c4d31e449eb8fdb14994ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 7824155121535623836, guid: ec68ff84cb33f5540a8d464b2031c3e0, type: 3}
+  destroy: {fileID: 2837905382559690564}
 --- !u!4 &944736934576867988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3113491465623070878, guid: d9f89c38b6dca98438e2cf469faa24eb, type: 3}

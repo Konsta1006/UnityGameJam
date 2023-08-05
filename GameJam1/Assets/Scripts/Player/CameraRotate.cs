@@ -29,7 +29,7 @@ public class CameraRotate : MonoBehaviour
         transform.eulerAngles = TargetRot;
 
         transform.position = Player.transform.position - transform.forward * distance;
-
+        
 
     }
 }
