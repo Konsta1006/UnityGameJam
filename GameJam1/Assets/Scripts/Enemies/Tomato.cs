@@ -25,40 +25,49 @@ public class Tomato : MonoBehaviour
     }
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < 50f)
+        if (player != null)
         {
-            Agressive = true;
-        }
-        else
-        {
-            NavMeshAgent nav = GetComponent<NavMeshAgent>();
-            Agressive = false;
-            nav.SetDestination(StartPos);
-        }
-        if (Agressive)
-        {
-            NavMeshAgent nav = GetComponent<NavMeshAgent>();
-            if (Vector3.Distance(transform.position, player.transform.position) > 25f)
+            if (Vector3.Distance(transform.position, player.transform.position) < 50f)
             {
-                nav.speed = 5.5f;
-                going1 = true;
-                nav.SetDestination(player.transform.position);
-                stopfire = true;
+                Agressive = true;
             }
             else
             {
-                nav.speed = 0.1f;
-                RotateTowards();
-                going1 = false;
-                minigun.Rotate(Time.deltaTime * 500, 0, 0);
-                if (!going1 && going2)
-                {
-                    stopfire = false;
-                    StartCoroutine(ShootingMode());
-                }
+                NavMeshAgent nav = GetComponent<NavMeshAgent>();
+                Agressive = false;
+                nav.SetDestination(StartPos);
             }
-            going2 = going1;
+            if (Agressive)
+            {
+
+                NavMeshAgent nav = GetComponent<NavMeshAgent>();
+                if (Vector3.Distance(transform.position, player.transform.position) > 25f)
+                {
+                    nav.speed = 5.5f;
+                    going1 = true;
+                    nav.SetDestination(player.transform.position);
+                    stopfire = true;
+                }
+                else
+                {
+                    nav.speed = 0.1f;
+                    RotateTowards();
+                    going1 = false;
+                    minigun.Rotate(Time.deltaTime * 500, 0, 0);
+                    if (!going1 && going2)
+                    {
+                        stopfire = false;
+                        StartCoroutine(ShootingMode());
+                    }
+                }
+                going2 = going1;
+            }
         }
+        else
+        {
+            stopfire = true;
+        }
+        
     }
 
 

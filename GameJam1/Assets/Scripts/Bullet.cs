@@ -24,6 +24,7 @@ public class Bullet : MonoBehaviour
             var x = Instantiate(particles);
             x.transform.position = hit.point;
             Destroy(gameObject);
+            hit.collider.gameObject.GetComponent<PlayerDamage>().Damage(17);
         }
         if (Physics.Raycast(ray, out RaycastHit hit1, speed * Time.deltaTime, Ground))
         {

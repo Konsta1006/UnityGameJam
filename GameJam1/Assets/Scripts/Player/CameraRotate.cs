@@ -19,16 +19,20 @@ public class CameraRotate : MonoBehaviour
 
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        angleX -= Input.GetAxis("Mouse Y") * sens;
-        angleY += Input.GetAxis("Mouse X") * sens;
-        angleX = Mathf.Clamp(angleX, 5, 90);
+        if (Player != null)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            angleX -= Input.GetAxis("Mouse Y") * sens;
+            angleY += Input.GetAxis("Mouse X") * sens;
+            angleX = Mathf.Clamp(angleX, 5, 90);
 
-        Vector3 TargetRot = new Vector3(angleX, angleY);
+            Vector3 TargetRot = new Vector3(angleX, angleY);
 
-        transform.eulerAngles = TargetRot;
+            transform.eulerAngles = TargetRot;
 
-        transform.position = Player.transform.position - transform.forward * distance;
+            transform.position = Player.transform.position - transform.forward * distance;
+        }
+        
         
 
     }
