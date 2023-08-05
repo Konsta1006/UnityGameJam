@@ -6,45 +6,70 @@ public class Walk : MonoBehaviour
 {
     [SerializeField] LayerMask Ground;
     [SerializeField] GameObject legTarget;
-    [SerializeField] Vector3 Offset;
-    [SerializeField] float StartOffset;
+    [SerializeField] Vector2 BaseOffset;
     [SerializeField] float distance;
-    private GameObject offset;
+    [SerializeField] Rigidbody parent;
+    [SerializeField] float targetRbMult;
+    [SerializeField] float MinBodyDist;
     private Vector3 fixedPos;
-    private GameObject parent;
+    private Vector3 target;
+
+    private void Awake()
+    {
+
+    }
+
     private void Start()
     {
-        offset = new GameObject();
-        parent = transform.parent.gameObject;
-        offset.transform.parent = parent.transform;
-        offset.transform.localPosition = Offset;
-        Vector3 target = offset.transform.position + StartOffset * parent.transform.forward;
-        if (Physics.Raycast(target, Vector3.down, out RaycastHit hit, 5f, Ground))
-        {
-            legTarget.transform.position = hit.point;
-        }
+        CalculateLegPosition();
     }
+
     void Update()
     {
-        Vector3 target = offset.transform.position;
+        CalculateLegPosition();
+        CheckForBody();
+    }
+
+    public void CalculateLegPosition()
+    {
+        target = parent.velocity*targetRbMult + parent.gameObject.transform.position + parent.transform.forward * BaseOffset.x + parent.transform.right * BaseOffset.y;
         RaycastHit hit;
         if (Physics.Raycast(target, Vector3.down, out hit, 5f, Ground))
         {
-            if (Vector3.Distance(legTarget.transform.position, hit.point)>distance)
+            if (Vector3.Distance(legTarget.transform.position, hit.point) > distance)
             {
                 fixedPos = hit.point;
                 //fixedPos = Vector3.Lerp(fixedPos, hit.point, Time.deltaTime * 6);
             }
         }
         //legTarget.transform.position = fixedPos;
-        legTarget.transform.position = Vector3.Lerp(legTarget.transform.position,fixedPos, Time.deltaTime * 16);
+        legTarget.transform.position = Vector3.Slerp(legTarget.transform.position, fixedPos, Time.deltaTime * 16);
+    }
+
+    public void CheckForBody()
+    {
+        target = parent.velocity * targetRbMult + parent.gameObject.transform.position + parent.transform.forward * BaseOffset.x + parent.transform.right * BaseOffset.y;
+        if (Physics.Raycast(parent.transform.position,Vector3.down,out RaycastHit hit, 10f, Ground))
+        {
+
+            if (Vector3.Distance(legTarget.transform.position, hit.point) < MinBodyDist)
+            {
+                if (Physics.Raycast(target, Vector3.down, out hit, 5f, Ground))
+                {
+
+                    fixedPos = hit.point;
+
+                }
+            }
+        }
+        legTarget.transform.position = Vector3.Slerp(legTarget.transform.position, fixedPos, Time.deltaTime * 16); 
     }
 
     private void OnDrawGizmos()
     {
-        
+        target = parent.velocity * targetRbMult + parent.gameObject.transform.position + parent.transform.forward * BaseOffset.x + parent.transform.right * BaseOffset.y;
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(new Vector3(Offset.x + transform.position.x, transform.position.y, transform.position.z + Offset.y), 0.4f) ;
+        Gizmos.DrawWireSphere(target, 0.4f) ;
         
     }
 }

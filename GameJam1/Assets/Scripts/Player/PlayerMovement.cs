@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         LimitSpeed();
         Jump();
+       
     }
 
     public void CopyCameraRotY()
