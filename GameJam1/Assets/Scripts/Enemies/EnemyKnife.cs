@@ -13,7 +13,7 @@ public class EnemyKnife : MonoBehaviour
         {
             if (hitCollider.gameObject.layer == 7)
             {
-                hitCollider.gameObject.GetComponent<PlayerDamage>().Damage(30);
+                hitCollider.gameObject.GetComponent<PlayerDamage>().Damage(10*DifficultyLevel.difficulyLevel);
             }
         }
         

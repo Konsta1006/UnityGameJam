@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 public class Tomato : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public Transform minigun;
     public Transform bulletStartPos;
     public GameObject bullet;
@@ -22,6 +22,7 @@ public class Tomato : MonoBehaviour
     private void Start()
     {
         StartPos = transform.position;
+        player = GameObject.FindWithTag("player").transform.Find("TARGET").transform;
     }
     void Update()
     {

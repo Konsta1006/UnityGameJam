@@ -9,11 +9,11 @@ public class CameraRotate : MonoBehaviour
     float angleX;
     float angleY;
     [SerializeField] float sens;
-    [SerializeField] GameObject Player;
+    private GameObject Player;
 
     void Start()
     {
-
+        Player = GameObject.FindWithTag("player");
     }
 
 

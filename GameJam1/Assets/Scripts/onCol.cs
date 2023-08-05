@@ -17,9 +17,13 @@ public class onCol : MonoBehaviour
 
     public void Heal(GameObject particles)
     {
-        GameObject.FindWithTag("player").GetComponent<PlayerDamage>().Heal(40);
-        var x = Instantiate(particles);
-        x.transform.position = transform.position;
-        Destroy(gameObject);
+        if (GameObject.FindWithTag("player").GetComponent<PlayerDamage>()!=null)
+        {
+            GameObject.FindWithTag("player").GetComponent<PlayerDamage>().Heal(40);
+            var x = Instantiate(particles);
+            x.transform.position = transform.position;
+            Destroy(gameObject);
+        }
+        
     }
 }

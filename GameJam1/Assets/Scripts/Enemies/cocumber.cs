@@ -5,12 +5,26 @@ using UnityEngine.AI;
 
 public class cocumber : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
+    Vector3 startpos;
+    private void Start()
+    {
+        player = GameObject.FindWithTag("player");
+        startpos = transform.position;
+    }
     void Update()
     {
         if (player != null)
         {
-            GetComponent<NavMeshAgent>().SetDestination(player.transform.position);
+            if (Vector3.Distance(player.transform.position, transform.position) < 50f)
+            {
+                GetComponent<NavMeshAgent>().SetDestination(player.transform.position);
+            }
+            else
+            {
+                GetComponent<NavMeshAgent>().SetDestination(startpos);
+            }
+            
         }
         
     }
