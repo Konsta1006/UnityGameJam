@@ -151,7 +151,7 @@ Transform:
   - {fileID: 5853045524307112935}
   - {fileID: 934427085525365716}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &7594026032737919784
 SphereCollider:
@@ -256,6 +256,9 @@ MonoBehaviour:
   HP: 100
   HPbar: {fileID: 0}
   body: {fileID: 7329958554203945654, guid: d35005b670378e14e8643a979cd74f82, type: 3}
+  dead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4430813905221009319
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,8 +622,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0417615, y: 2.2279081, z: 9.792705}
-  m_Center: {x: 0, y: -0.14926505, z: 4.938173}
+  m_Size: {x: 0.09, y: 0, z: 9.792705}
+  m_Center: {x: 0, y: 0, z: 4.938173}
 --- !u!95 &8981382154699624996
 Animator:
   serializedVersion: 5

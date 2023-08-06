@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PlayerDamage : MonoBehaviour
 {
     [SerializeField] float HP = 100f;
     [SerializeField] Slider HPbar;
     [SerializeField] GameObject body;
+    [SerializeField] UnityEvent dead = new UnityEvent();
     float startHP;
 
     private void Start()
@@ -34,6 +36,7 @@ public class PlayerDamage : MonoBehaviour
     {
         var x = Instantiate(body);
         x.transform.position = transform.position;
+        dead.Invoke();
         Destroy(gameObject);
     }
 

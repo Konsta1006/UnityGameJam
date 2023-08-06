@@ -1380,7 +1380,7 @@ Transform:
   m_Children:
   - {fileID: 3436208055188290506}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &4486656543983140176
 NavMeshAgent:
@@ -1392,8 +1392,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 16
+  m_Acceleration: 120
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -1416,7 +1416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8b2617d3a11b746aca4a26ba1d53d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!136 &2577956552264206826
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1436,7 +1435,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.78
+  m_Radius: 0.63
   m_Height: 7.38
   m_Direction: 1
   m_Center: {x: 0, y: 2.89, z: 0}
