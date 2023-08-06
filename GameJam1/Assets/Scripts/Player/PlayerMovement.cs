@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         LimitSpeed();
         Jump();
+       
     }
 
     public void CopyCameraRotY()
@@ -84,6 +85,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(transform.position - Vector3.up * 2.1f, 1f);
+        Gizmos.DrawWireSphere(transform.position - Vector3.up * 2.1f, 1f);
     }
 }
