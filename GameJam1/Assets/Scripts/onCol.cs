@@ -7,12 +7,16 @@ public class onCol : MonoBehaviour
 {
     [SerializeField] UnityEvent eventX = new UnityEvent();
     [SerializeField] float radius = 1;
+    LayerMask mask;
     void Update()
     {
-        if (Physics.CheckSphere(transform.position, radius))
+        mask = LayerMask.GetMask("Player");
+        if (Physics.CheckSphere(transform.position, radius, mask))
         {
             eventX.Invoke();
+            
         }
+        
     }
 
     public void Heal(GameObject particles)
@@ -25,5 +29,25 @@ public class onCol : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    public void beActive(GameObject obj)
+    {
+        if (Physics.CheckSphere(transform.position, radius*0.9f, mask))
+        {
+            Debug.Log("x");
+            obj.SetActive(true);
+        }
+        else
+        {
+            obj.SetActive(false);
+        }
+        
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
