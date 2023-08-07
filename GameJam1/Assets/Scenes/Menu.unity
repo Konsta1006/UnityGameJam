@@ -3532,7 +3532,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   legTarget: {fileID: 8979515666748184696}
-  BaseOffset: {x: 0, y: -1.21}
+  BaseOffset: {x: 0, y: -2}
   distance: 2.5
   parent: {fileID: 958289613165641540}
   targetRbMult: 0.06
