@@ -8,12 +8,13 @@ public class CameraRotate : MonoBehaviour
     Vector3 offset;
     float angleX;
     float angleY;
-    [SerializeField] float sens;
+    //[SerializeField] float sens;
     private GameObject Player;
 
     void Start()
     {
         Player = GameObject.FindWithTag("player");
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
@@ -21,9 +22,9 @@ public class CameraRotate : MonoBehaviour
     {
         if (Player != null)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            angleX -= Input.GetAxis("Mouse Y") * sens;
-            angleY += Input.GetAxis("Mouse X") * sens;
+            
+            angleX -= Input.GetAxis("Mouse Y") * PlayerPrefs.GetFloat("Sens");
+            angleY += Input.GetAxis("Mouse X") * PlayerPrefs.GetFloat("Sens");
             angleX = Mathf.Clamp(angleX, 5, 90);
 
             Vector3 TargetRot = new Vector3(angleX, angleY);

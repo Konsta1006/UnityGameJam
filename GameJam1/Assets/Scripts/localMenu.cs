@@ -5,7 +5,10 @@ using UnityEngine;
 public class localMenu : MonoBehaviour
 {
     [SerializeField] GameObject menu;
-    
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -17,17 +20,17 @@ public class localMenu : MonoBehaviour
     public void SwitchMenu()
     {
         
-        if (!menu.activeSelf)
+        if (menu.activeSelf)
         {
             menu.SetActive(false);
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
         }
         else
         {
             menu.SetActive(true);
-            Time.timeScale = 0.1f;
-            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 }
