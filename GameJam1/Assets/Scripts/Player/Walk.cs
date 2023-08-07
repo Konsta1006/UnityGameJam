@@ -15,10 +15,7 @@ public class Walk : MonoBehaviour
     private Vector3 target;
     
 
-    private void Awake()
-    {
-
-    }
+    
 
     private void Start()
     {
@@ -40,7 +37,10 @@ public class Walk : MonoBehaviour
             if (Vector3.Distance(legTarget.transform.position, hit.point) > distance)
             {
                 fixedPos = hit.point;
-                //fixedPos = Vector3.Lerp(fixedPos, hit.point, Time.deltaTime * 6);
+                if (GetComponent<PlayRandSound>() != null)
+                {
+                    GetComponent<PlayRandSound>().PlayRandomSound();
+                }
             }
         }
         //legTarget.transform.position = fixedPos;

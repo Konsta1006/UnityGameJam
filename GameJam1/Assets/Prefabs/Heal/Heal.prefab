@@ -121,7 +121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a19741f49e42f6b4999f0e45ac8c398f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a19741f49e42f6b4999f0e45ac8c398f, type: 3}
       propertyPath: m_LocalScale.x
@@ -245,7 +245,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  radius: 1
+  radius: 3.5
 --- !u!95 &5773805245600157227
 Animator:
   serializedVersion: 5

@@ -9,7 +9,11 @@ public class cocumber : MonoBehaviour
     Vector3 startpos;
     private void Start()
     {
-        player = GameObject.FindWithTag("player");
+        if (GameObject.FindWithTag("player") != null)
+        {
+            player = GameObject.FindWithTag("player");
+        }
+        
         startpos = transform.position;
     }
     void Update()

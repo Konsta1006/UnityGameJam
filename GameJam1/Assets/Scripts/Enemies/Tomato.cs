@@ -22,7 +22,11 @@ public class Tomato : MonoBehaviour
     private void Start()
     {
         StartPos = transform.position;
-        player = GameObject.FindWithTag("player").transform.Find("TARGET").transform;
+        if (GameObject.FindWithTag("player") != null)
+        {
+            player = GameObject.FindWithTag("player").transform.Find("TARGET").transform;
+        }
+        
     }
     void Update()
     {

@@ -13,7 +13,7 @@ public class Healrotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = startPos + Vector3.up * Mathf.Sin(Time.time * 0.5f) * 0.1f;
+        transform.position = startPos + Vector3.up * Mathf.Sin(Time.time * 2f) * 0.1f;
         
     }
 }

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cucmber
+  m_Name: Sand
   m_Shader: {fileID: -6465566751694194690, guid: b90b244eb9703ed48a164e7d070d6861, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -40,9 +40,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.07711069, g: 0.38679248, b: 0.0748042, a: 0}
+    - _Color: {r: 0.5566038, g: 0.45069876, b: 0.18640977, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &9014587212776020850
+--- !u!114 &4891888820082735246
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -485,6 +485,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5534187088885206728, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5863002523085081842}
+    - targetCorrespondingSourceObject: {fileID: 5534187088885206728, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2398488258131093884}
   m_SourcePrefab: {fileID: 100100000, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
 --- !u!1 &1545107235916103647 stripped
 GameObject:
@@ -613,6 +616,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2398488258131093884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105285371979099618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34d04b8b7eb9f2488c44eb12573deae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: f8520ad9b15e91140850ebb97b9df9c9, type: 3}
+  - {fileID: 8300000, guid: 992204bb1390e1f4c9d60c4b7aa3a249, type: 3}
+  - {fileID: 8300000, guid: 3858fdb3cf3321b4f9d4f7bd149b3a5f, type: 3}
 --- !u!4 &6913452168507012952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5154001963720774770, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
@@ -845,6 +864,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5534187088885206728, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2122176415362805153}
+    - targetCorrespondingSourceObject: {fileID: 5534187088885206728, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5574265641407284272}
   m_SourcePrefab: {fileID: 100100000, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
 --- !u!4 &2742908532108763888 stripped
 Transform:
@@ -973,6 +995,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5574265641407284272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268228406949148746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34d04b8b7eb9f2488c44eb12573deae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: f8520ad9b15e91140850ebb97b9df9c9, type: 3}
+  - {fileID: 8300000, guid: 992204bb1390e1f4c9d60c4b7aa3a249, type: 3}
+  - {fileID: 8300000, guid: 3858fdb3cf3321b4f9d4f7bd149b3a5f, type: 3}
 --- !u!1 &7822772348256430711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 938551632056524021, guid: bec1f10148d3e2e49b7a1c62909e864d, type: 3}
